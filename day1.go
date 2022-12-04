@@ -36,7 +36,7 @@ func main() {
 6511
 3601
 4786`
-	fmt.Println(strings.Split(listOfElves, "\n")[0])
+	fmt.Println(strings.Split(listOfElves, "\n"))
 
 	// Check input string for
 }
