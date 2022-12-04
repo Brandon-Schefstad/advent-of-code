@@ -1,0 +1,5 @@
+node_modules
+go-crash-course
+bin
+.vscode
+pkg
