@@ -10,11 +10,7 @@
  * Score = 
  */
 
-let gameValues:{
-  'X':string,
-  'Y':string,
-  'Z':string
-}[]
+
 
  const input = `A Y
  B X
@@ -23,16 +19,12 @@ let gameValues:{
  console.log(getScore(input));
 
 function getScore(inputGames: string): number{
-  const gameValues = {
-    'X':0,
-    'Y':3,
-    'Z':6
-  }
   const gameArray = inputGames.split('\n')
   const gamesSubArrays = gameArray.map((game, index)=>{
     return index === 0 ? game.split(' ') : 
     game.split(' ').slice(1)
   })
+
   const gamesSubArraysWithResults = gamesSubArrays.map((game)=>{
     switch (game[1]) {
       case 'X': // LOSING
@@ -76,7 +68,7 @@ function getScore(inputGames: string): number{
   })
   let total = 0
   const RPSScore = gamesSubArraysWithResults.reduce((current,acc)=> current+acc, total)
-  return  RPSScore 
+  return RPSScore 
 }
 
 

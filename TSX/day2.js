@@ -9,15 +9,9 @@
  * totalScore = Sum of scores for each round
  * Score =
  */
-var gameValues;
 var input = "A Y\n B X\n C Z\n ";
 console.log(getScore(input));
 function getScore(inputGames) {
-    var gameValues = {
-        'X': 0,
-        'Y': 3,
-        'Z': 6
-    };
     var gameArray = inputGames.split('\n');
     var gamesSubArrays = gameArray.map(function (game, index) {
         return index === 0 ? game.split(' ') :

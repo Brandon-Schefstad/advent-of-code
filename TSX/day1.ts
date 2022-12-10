@@ -1,5 +1,7 @@
+console.time('This Test')
 function findElfWithFood(listOfElfInventory: string): number{
-  // Cleans input to remove \n characters
+
+// Cleans input to remove \n characters
 const noNewLines: string[] = listOfElfInventory.replace(/[\n]/gi, ' ').split('  ')
 // Divides input string into individual elf inventories, converting strings to ints as well
 const elvesSplitIndividually = noNewLines.map((elf)=>{
@@ -18,6 +20,7 @@ const elfWithMostFood = elfSumsSorted.slice(0,3)
 return elfWithMostFood.reduce((a,b)=>
   a + b
 , 0)
+
 }
 
 
@@ -2259,3 +2262,4 @@ console.log(findElfWithFood(`3120
 5186
 5159
 1952`))
+console.timeEnd('This Time')
